@@ -1,0 +1,46 @@
+/* services.css */
+
+/* Style pour la section Nos Services */
+.service-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; /* Ajustez cette ligne */
+    margin: 50px 0;
+}
+
+
+.floating-element {
+    font-size: 18px;
+    padding: 15px 30px;
+    border: 2px solid #28a745;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #28a745;
+    background-color: #fff;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    transition: transform 1s;
+    display: inline-block;
+    line-height: 1.5; /* Ajustez cette valeur en fonction de la hauteur souhaitée */
+}
+
+
+.floating-element:hover {
+    background-color: #28a745;
+    color: #c10808;
+}
+
+/* Ajoutez d'autres styles HD ici au besoin */
+
+/* HD Media Query */
+@media (min-width: 1920px) {
+    .service-buttons {
+        margin: 100px 0;
+    }
+
+    .floating-element {
+        font-size: 24px;
+        padding: 20px 40px;
+        border-width: 3px;
+    }
+}

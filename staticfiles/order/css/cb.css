@@ -1,0 +1,9 @@
+/* styles.css */
+#countdown {
+    background-color: #f6efef; /* Couleur de fond de l'écran rectangulaire */
+    color: #a80606; /* Couleur du texte à l'intérieur de l'écran rectangulaire */
+    padding: 20px; /* Espacement intérieur de l'écran rectangulaire */
+    border: 2px solid #055816; /* Bordure blanche autour de l'écran rectangulaire */
+    border-radius: 10px; /* Coins arrondis de l'écran rectangulaire */
+    text-align: center; /* Centre le texte à l'intérieur de l'écran rectangulaire */
+  }
