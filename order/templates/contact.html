@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'order/css/services.css' %}">
+<div class="container mt-5">
+    <h1 class="mb-4">Contactez Agrocrown</h1>
+    <div class="row">
+        <div class="col-md-6">
+            <p class="mb-4">Numéro de téléphone : +228 99196612</p>
+            <p class="mb-4">Envoyez un message à : <a href="mailto:agrocrown2.0@gmail.com">agrocrown2.0@gmail.com</a></p>
+        </div>
+        <div class="col-md-6">
+            <form method="post" class="mb-4">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="message">Votre message :</label>
+                    <textarea class="form-control" name="message" rows="4" id="message" placeholder="Votre message" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-success">Envoyer</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

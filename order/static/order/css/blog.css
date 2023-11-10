@@ -1,0 +1,36 @@
+/* blog.css */
+
+/* Style pour le titre du blog */
+.display-4 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Style pour le texte d'introduction */
+.lead {
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+/* Style pour la carte de l'article */
+.card {
+    border: none;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+/* HD Media Query */
+@media (min-width: 1920px) {
+    .display-4 {
+        font-size: 48px;
+    }
+
+    .lead {
+        font-size: 24px;
+    }
+}

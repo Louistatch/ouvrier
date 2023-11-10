@@ -13,9 +13,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 from pathlib import Path
 import os
 from django.contrib.messages import constants as messages
-from django.core.management.utils import get_random_secret_key
-import sys
-import dj_database_url
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -25,13 +23,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.getenv("DJANGO_SECRET_KEY", get_random_secret_key())
+SECRET_KEY = 'django-insecure-8u_4gkvl(*&dwwg(c#vk8f%0zvn@2yc+e!s51^&i9rwjxd_55#'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.getenv("DEBUG", "False") == "True"
+DEBUG = True
 
 # settings.py
-ALLOWED_HOSTS = os.getenv("DJANGO_ALLOWED_HOSTS", "127.0.0.1,localhost").split(",")
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', '342f-102-64-222-200.ngrok-free.app ']
 
 
 # Application definition
@@ -56,7 +54,7 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
+   # 'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
@@ -87,21 +85,12 @@ WSGI_APPLICATION = 'agrocrown.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-DEVELOPMENT_MODE = os.getenv("DEVELOPMENT_MODE", "False") == "True"
-
-if DEVELOPMENT_MODE is True:
-    DATABASES = {
-        "default": {
-            "ENGINE": "django.db.backends.sqlite3",
-            "NAME": os.path.join(BASE_DIR, "db.sqlite3"),
-        }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
-elif len(sys.argv) > 0 and sys.argv[1] != 'collectstatic':
-    if os.getenv("DATABASE_URL", None) is None:
-        raise Exception("DATABASE_URL environment variable not defined")
-    DATABASES = {
-        "default": dj_database_url.parse(os.environ.get("DATABASE_URL")),
-    }
+}
 
 
 # Password validation
@@ -142,7 +131,6 @@ STATIC_URL = 'static/'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'files/')
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),)
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field

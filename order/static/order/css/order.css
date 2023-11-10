@@ -1,0 +1,78 @@
+/* order.css */
+
+/* Styles généraux */
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.btn-primary {
+    background-color: #10732a;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* Styles pour le formulaire */
+.form-step {
+    background-color: #064d06;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.form-field {
+    background-color: #0f461a;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(1, 18, 8, 0.833);
+}
+
+.form-step th {
+    color: #f0f1f0; /* Couleur du texte pour le nom des champs */
+    background-color: #0f461a; /* Couleur d'arrière-plan pour la colonne des noms de champs */
+}
+
+.form-step td {
+    color: #121714; /* Couleur du texte pour la colonne des données */
+    background-color: #ffffff; /* Couleur d'arrière-plan pour la colonne des données */
+}
+
+/* Styles pour le bouton Soumettre */
+.form-step button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.form-step button:hover {
+    background-color: #0056b3;
+}
+
+/* Styles pour le carrousel d'images */
+.carousel-control-prev,
+.carousel-control-next {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #007BFF;
+}
+
+.carousel-item img {
+    max-width: 100%;
+    height: auto;
+}

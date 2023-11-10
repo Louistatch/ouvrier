@@ -1,0 +1,15 @@
+.countdown-container {
+    background-color: #0f5624;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(1, 18, 8, 0.833);
+}
+
+.countdown-text {
+    font-size: 24px;
+}
+
+.countdown-message {
+    font-size: 18px;
+}

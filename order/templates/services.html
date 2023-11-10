@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Services - AgroCrown{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'order/css/services.css' %}">
+    <div class="container">
+        <h1 class="display-4 mt-5">Nos Services</h1>
+        <div class="service-buttons mt-4">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Prestations de Services</h5>
+                            <a href="#" class="btn btn-primary">Découvrir</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Nos Produits</h5>
+                            <a href="#" class="btn btn-primary">Découvrir</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Compte d'Exploitation</h5>
+                            <a href="#" class="btn btn-primary">Découvrir</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Nos Formations</h5>
+                            <a href="#" class="btn btn-primary">Découvrir</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="{% static 'order/js/services.js' %}"></script>
+{% endblock %}
