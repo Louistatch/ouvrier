@@ -42,7 +42,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'whitenoise.runserver_nostatic',
     'django.contrib.staticfiles',
-    'django_createsuperuser',
     'order.apps.OrderConfig',
     'bootstrap4',
     'crispy_forms',
