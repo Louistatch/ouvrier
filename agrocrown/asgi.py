@@ -16,9 +16,7 @@ os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'agrocrown.settings')
 application = get_asgi_application()
 
 from django.core.management import execute_from_command_line
-from pyngrok import ngrok
 
 # Démarrez un tunnel ngrok
-public_url = ngrok.connect(port="80")
 
 execute_from_command_line()
