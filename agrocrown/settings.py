@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure-8u_4gkvl(*&dwwg(c#vk8f%0zvn@2yc+e!s51^&i9rwjxd_55#
 DEBUG = True
 
 # settings.py
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', '342f-102-64-222-200.ngrok-free.app ']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', '  https://342f-102-64-222-200.ngrok-free.app ']
 
 
 # Application definition
@@ -40,7 +40,9 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    'whitenoise.runserver_nostatic',
     'django.contrib.staticfiles',
+    'django_createsuperuser',
     'order.apps.OrderConfig',
     'bootstrap4',
     'crispy_forms',
@@ -54,7 +56,8 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
-   # 'django.middleware.csrf.CsrfViewMiddleware',
+    'django.middleware.csrf.CsrfViewMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
