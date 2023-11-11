@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure-8u_4gkvl(*&dwwg(c#vk8f%0zvn@2yc+e!s51^&i9rwjxd_55#
 DEBUG = True
 
 # settings.py
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', '  https://342f-102-64-222-200.ngrok-free.app ']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -149,10 +149,6 @@ MESSAGE_TAGS = {
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 
-CORS_ALLOWED_ORIGINS = [
-    'https://342f-102-64-222-200.ngrok-free.app',
-    # Ajoutez d'autres origines de confiance au besoin
-]
 
 CSRF_COOKIE_NAME = 'csrftoken'
 CSRF_COOKIE_DOMAIN = None
