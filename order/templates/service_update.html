@@ -1,0 +1,36 @@
+<!-- order/templates/order/service_update.html -->
+
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Service Update - AgroCrown{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'order/css/order.css' %}">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" integrity="sha384-gH2yIVqQkTU6555S5rX/adQzU6heGn8CbQpTwT5dSp4TwT5dSp4/e4Px2qUKtP6/" crossorigin="anonymous">
+
+<div class="container">
+    <h1 class="display-4 mt-5">Nos Prestations</h1>
+
+    <!-- Lien vers marketlink/submit_form.html -->
+    <div class="mb-3">
+        <a href="{% url 'marketlink:submit_product_form' %}" class="btn btn-primary">Recherche de Marché</a>
+    </div>
+    <!-- Lien vers order/order_form.html -->
+    <div class="mb-3">
+        <a href="{% url 'order:order_form' %}" class="btn btn-primary">Commande de Metayer</a>
+    </div>
+    <div class="mb-3">
+        <a href="#" class="btn btn-primary">Suivi de votre exploitation agricole</a>
+    </div>
+    <div class="mb-3">
+        <a href="#" class="btn btn-primary">Installation de systeme d'irrigation</a>
+    </div>
+    <div class="mb-3">
+        <a href="#" class="btn btn-primary">Demande d'un compte d'exploitation</a>
+    </div>
+    <div class="mb-3">
+        <a href="#" class="btn btn-primary">Redaction de plan d'affaire</a>
+    </div>
+</div>
+{% endblock %}

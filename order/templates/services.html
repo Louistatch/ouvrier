@@ -5,6 +5,8 @@
 
 {% block content %}
 <link rel="stylesheet" href="{% static 'order/css/services.css' %}">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" integrity="sha384-gH2yIVqQkTU6555S5rX/adQzU6heGn8CbQpTwT5dSp4TwT5dSp4/e4Px2qUKtP6/" crossorigin="anonymous">
+
     <div class="container">
         <h1 class="display-4 mt-5">Nos Services</h1>
         <div class="service-buttons mt-4">
@@ -13,7 +15,7 @@
                     <div class="card">
                         <div class="card-body text-center">
                             <h5 class="card-title">Prestations de Services</h5>
-                            <a href="#" class="btn btn-primary">Découvrir</a>
+                            <a href="{% url 'order:service_update' %}" class="btn btn-primary">Découvrir</a>
                         </div>
                     </div>
                 </div>

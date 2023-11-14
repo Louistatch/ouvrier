@@ -1,5 +1,6 @@
+from django.shortcuts import render  # Assurez-vous que cette ligne d'import est présente
 from django.urls import reverse
-from django.views.generic import FormView, ListView, TemplateView
+from django.views.generic import FormView, ListView, TemplateView, View
 from .models import order
 from .forms import orderForm
 
@@ -28,4 +29,10 @@ class ServicesView(TemplateView):
     
 class ContactView(TemplateView):
     template_name = 'contact.html'
-    
+
+class ServiceUpdateView(View):
+    template_name = 'service_update.html'
+
+    def get(self, request, *args, **kwargs):
+        # Logique de la vue si nécessaire
+        return render(request, self.template_name)
