@@ -9,7 +9,7 @@ class OrderFormView(FormView):
     form_class = orderForm
 
     def get_success_url(self):
-        return reverse('order_list')
+        return reverse('order:order_list')
 
     def form_valid(self, form):
         form.save()
